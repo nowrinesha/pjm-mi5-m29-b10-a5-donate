@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+   
+</head>
+<body class="bg-white">
+    <header class="fixed w-full top-0 left-0 z-50">
+        <nav class="bg-[#f9f7f3]">
+            <div class="container mx-auto navbar text-black">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+
+                      <li><a href="./index.html">
+                        <img src="./assets/logo.png" class="w-6" alt="">
+                        <span class="text-xl font-bold">Donate Bangladesh</span>
+                      </a></li>
+                    </ul>
+                  </div>
+                  <a href="./blog.html"
+                  class="btn btn-ghost text-xl bg-[#b4f461]">Blog</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a href="./index.html">
+                        <img src="./assets/logo.png" class="w-6" alt="">
+                        <span class="text-xl font-bold">Donate Bangladesh</span>
+                      </a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                    <img src="./assets/coin.png" alt="">
+                    <span id="accountBalance" class="ms-2">5500 BDT</span>
+                </div>
+            </div>
+        </nav>
+        <div class="bg-white pt-10 pb-5">
+          <div class="text-center space-x-5 text-black mb-8">
+            <button id="donationBtn" 
+            class="border-2 px-2 py-1"
+            onclick="showDonation()" 
+            style="background-color: #b4f461;"
+            >Donation</button>
+  
+            <button id="historyBtn" 
+            class="border-2 px-2 py-1"
+            onclick="showHistory()"
+            >History</button>
+          </div>
+        </div>
+    </header>
+    <main class="container mx-auto mt-60">
+      <div class="my-10">
+        
+        <div id="donation" style="display: block;" class="space-y-5">
+          <!-- 1 card start -->
+          <div id="card1" class="border-2 p-4 rounded-2xl mx-5">
+            <!-- card 1 -->
+            <div class="card lg:card-side">
+              <figure class="md:w-1/2">
+                <img
+                  src="./assets/noakhali.png"
+                  alt="Album" />
+              </figure>
+              <div class="card-body md:w-1/2">
+                <div class="flex">
+                  <img src="./assets/coin.png" class="w-6 h-6" alt="">
+                  <p class="ps-2 text-black">100 BDT</p>
+                </div>
+                <h2 class="card-title text-black">Donate for Flood at Noakhali, Bangladesh</h2>
+                <p>
+                  The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                </p>
+                <input type="text" 
+                class="capitalize bg-transparent border-2 px-2 py-1 rounded mb-3" 
+                placeholder="Write donation amount">
+
+                <div class="card-actions">
+                  <button 
+                  class="btn w-full bg-[#b4f461] border-none text-black hover:text-white"
+                  onclick="my_modal_1.showModal()"
+                  
+                  >Donate Now</button>
+                  <dialog id="my_modal_1" class="modal">
+                    <div class="modal-box bg-white text-center">
+                      <h3 class="text-2xl font-bold text-black">Congrates!</h3>
+                      <div class="flex justify-center mt-2">
+                        <img src="./assets/coin.png" alt="" class="text-center">
+                      </div>
+                      
+                      <p class="py-4 capitalize">You have donated for humankind</p>
+                      <h4 class="text-xl font-bold text-black">Successfully</h4>
+                      <div class="modal-action flex justify-center">
+                        <form method="dialog ">
+                          <button 
+                          class="btn bg-[#b4f461] border-none"
+                          onclick="donateNow('card1', 'my_modal_1')"
+                          >Close confirmation</button>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
+                </div>
+
+        
+              </div>
+            </div>
+            <!-- card 1 -->
+          </div>
+          <!-- 1 card end -->
+           <!-- 2 card start -->
+          <div id="card2" class="border-2 p-4 rounded-2xl mx-5">
+            <!-- card 1 -->
+            <div class="card lg:card-side">
+              <figure class="md:w-1/2">
+                <img
+                  src="./assets/feni.png"
+                  alt="Album" />
+              </figure>
+              <div class="card-body md:w-1/2">
+                <div class="flex">
+                  <img src="./assets/coin.png" class="w-6 h-6" alt="">
+                  <p class="ps-2 text-black">100 BDT</p>
+                </div>
+                <h2 class="card-title text-black">Donate for Flood Relief in Feni,Bangladesh</h2>
+                <p>
+                  The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+                </p>
+                <input type="text" 
+                class="capitalize bg-transparent border-2 px-2 py-1 rounded mb-3" 
+                placeholder="Write donation amount">
+
+                <div class="card-actions">
+                  <button 
+                  class="btn w-full bg-[#b4f461] border-none text-black hover:text-white"
+                  onclick="my_modal_2.showModal()"
+                  >Donate Now</button>
+                  <dialog id="my_modal_2" class="modal">
+                    <div class="modal-box bg-white text-center">
+                      <h3 class="text-2xl font-bold text-black">Congrates!</h3>
+                      <div class="flex justify-center mt-2">
+                        <img src="./assets/coin.png" alt="" class="text-center">
+                      </div>
+                      
+                      <p class="py-4 capitalize">You have donated for humankind</p>
+                      <h4 class="text-xl font-bold text-black">Successfully</h4>
+                      <div class="modal-action flex justify-center">
+                        <form method="dialog ">
+                          <button 
+                          onclick="donateNow('card2', 'my_modal_2')"
+                          class="btn bg-[#b4f461] border-none">Close confirmation</button>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
+                </div>
+
+        
+              </div>
+            </div>
+            <!-- card 1 -->
+          </div>
+          <!-- 2 card end -->
+           <!-- 3 card start -->
+          <div id="card3" class="border-2 p-4 rounded-2xl mx-5">
+            <!-- card 1 -->
+            <div class="card lg:card-side">
+              <figure class="md:w-1/2">
+                <img
+                  src="./assets/quota-protest.png"
+                  alt="Album" />
+              </figure>
+              <div class="card-body md:w-1/2">
+                <div class="flex">
+                  <img src="./assets/coin.png" class="w-6 h-6" alt="">
+                  <p class="ps-2 text-black">100 BDT</p>
+                </div>
+                <h2 class="card-title text-black">Aid for Injured in the Quota Movement</h2>
+                <p>
+                  The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                </p>
+                <input type="text" 
+                class="capitalize bg-transparent border-2 px-2 py-1 rounded mb-3" 
+                placeholder="Write donation amount">
+
+                <div class="card-actions">
+                  <button 
+                  class="btn w-full bg-[#b4f461] border-none text-black hover:text-white"
+                  onclick="my_modal_3.showModal()"
+                  >Donate Now</button>
+                  <dialog id="my_modal_3" class="modal">
+                    <div class="modal-box bg-white text-center">
+                      <h3 class="text-2xl font-bold text-black">Congrates!</h3>
+                      <div class="flex justify-center mt-2">
+                        <img src="./assets/coin.png" alt="" class="text-center">
+                      </div>
+                      
+                      <p class="py-4 capitalize">You have donated for humankind</p>
+                      <h4 class="text-xl font-bold text-black">Successfully</h4>
+                      <div class="modal-action flex justify-center">
+                        <form method="dialog ">
+                          <button 
+                          onclick="donateNow('card3', 'my_modal_3')"
+                          class="btn bg-[#b4f461] border-none">Close confirmation</button>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
+                </div>
+
+        
+              </div>
+            </div>
+            <!-- card 1 -->
+          </div>
+          <!-- 3 card end -->
+        </div>
+        <!-- Donation end -->
+        <!-- History start -->
+        <div id="history" style="display: none;">
+          <div class="space-y-5">
+            
+          </div>
+          
+        </div>
+        <!-- History end -->
+      </div>
+
+    </main>
+
+    <footer class="footer footer-center bg-[#f9f7f3] text-black p-4">
+      <aside>
+        <p>Copyright © - All right reserved by Nowrin</p>
+      </aside>
+    </footer>
+
+    <script>
+      let accountBalance = 5500;
+  
+      // Update balance display
+      function updateBalance() {
+        document.getElementById("accountBalance").innerText = accountBalance + " BDT";
+      }
+
+      function showDonation() {
+        document.getElementById('donation').style.display = 'block';
+        document.getElementById('history').style.display = 'none';
+        
+
+        document.getElementById('donationBtn').style.backgroundColor = '#b4f461';
+        document.getElementById('historyBtn').style.backgroundColor = '';
+      }
+    
+      function showHistory() {
+        document.getElementById('donation').style.display = 'none';
+        document.getElementById('history').style.display = 'block';
+        
+    
+        document.getElementById('historyBtn').style.backgroundColor = '#b4f461';
+        document.getElementById('donationBtn').style.backgroundColor = '';
+      }
+
+      function donateNow(cardId, modalId) {
+
+         // Get the donation input value from the card
+        const cardElement = document.getElementById(cardId);
+        const donationInput = cardElement.querySelector("input").value;
+        const donationAmount = parseInt(donationInput);
+    
+        // Get the current donation amount on the card
+        const currentDonationElement = cardElement.querySelector(".card-body .ps-2");
+        let currentDonation = parseInt(currentDonationElement.innerText.replace(" BDT", ""));
+    
+        // Check if the donation amount is valid and less than or equal to the account balance
+        if (!isNaN(donationAmount) && donationAmount > 0 && donationAmount <= accountBalance) {
+          // Deduct donation amount from account balance
+          accountBalance -= donationAmount;
+    
+          // Update the balance on the screen
+          updateBalance();
+    
+          // Increase the current donation amount on the card
+          currentDonation += donationAmount;
+          currentDonationElement.innerText = currentDonation + " BDT";
+    
+          // Show success modal
+          document.getElementById(modalId).showModal();
+    
+        } else {
+          alert("Please enter a valid donation amount that is less than or equal to your balance.");
+        }
+
+
+
+
+        // 
+        const card = document.getElementById(cardId);
+        const history = document.getElementById('history');
+        
+        // Create a new history entry
+        const historyEntry = document.createElement('div');
+        historyEntry.classList.add('border-2', 'rounded', 'p-5', 'm-5');
+        
+        // Assuming the title and amount from the card are in specific locations
+        const cardTitle = card.querySelector('.card-title').textContent;
+        const cardAmount = card.querySelector('.ps-2').textContent;
+        
+        // Create history content
+        historyEntry.innerHTML = `
+          <h3 class="text-black mb-3">${cardAmount} is Donated for ${cardTitle}</h3>
+          <p>Date : ${new Date().toLocaleString()}</p>
+        `;
+        
+        // Add to the history section
+        history.appendChild(historyEntry);
+        
+        // Remove the card from donation
+        card.remove();
+        
+        // Show the confirmation modal
+        document.getElementById(modalId).showModal();
+      }
+
+      window.onload = updateBalance;
+    </script>
+
+</body>
+</html>

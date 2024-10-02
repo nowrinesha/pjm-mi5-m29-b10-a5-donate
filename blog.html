@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    <header class="fixed w-full top-0 left-0 z-50"></header>
+        <nav class="bg-[#f9f7f3]">
+            <div class="container mx-auto navbar text-black">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      <li><a href="./index.html">
+                        <img src="./assets/logo.png" class="w-6" alt="">
+                        <span class="text-xl font-bold">Donate Bangladesh</span>
+                      </a></li>
+                    
+                    </ul>
+                  </div>
+                  <a href="/blog.html"
+                  class="btn btn-ghost text-xl bg-[#b4f461]">Blog</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a href="/index.html">
+                        <img src="./assets/logo.png" class="w-6" alt="">
+                        <span class="text-xl font-bold">Donate Bangladesh</span>
+                      </a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                    <img src="./assets/coin.png" alt="">
+                    <span class="ms-2">5500 BDT</span>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="container mx-auto">
+        <div class="">
+            <h3 class="my-10 text-center font-bold text-black text-3xl underline">Blog</h3>
+        </div>
+        <div class="">
+            <div class="border-2 rounded-2xl p-5 md:p-10 m-5 space-y-5">
+                <h3 class="md:text-2xl font-bold">What is the Document Object Model (DOM)?</h3>
+                <p>
+                    The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the structure of a document as a tree-like hierarchy of objects, where each object corresponds to a part of the document, such as an element, attribute, or text node.
+                </p>
+            </div>
+            <div class="border-2 rounded-2xl p-5 md:p-10 m-5 space-y-5">
+                <h3 class="md:text-2xl font-bold">How do you select an element from the DOM?</h3>
+                <p>
+                    There are several ways to select elements from the DOM in JavaScript. Here are the most common methods:
+                </p>
+                <p>
+                    getElementById():
+                    Selects a single element by its ID attribute.
+                    javascriptCopyconst element = document.getElementById('myElement');
+                </p>
+                <p>
+                    getElementsByClassName():
+                    Selects multiple elements by their class name, returning a live HTMLCollection.
+                    javascriptCopyconst elements = document.getElementsByClassName('myClass');
+                </p>
+                <p>
+                    getElementsByTagName():
+                    Selects all elements with the specified tag name, returning a live HTMLCollection.
+                    javascriptCopyconst elements = document.getElementsByTagName('div');
+                </p>
+                <p>
+                    querySelector():
+                    Selects the first element that matches a CSS selector.
+                    javascriptCopyconst element = document.querySelector('.myClass');
+                </p>
+                <p>
+                    querySelectorAll():
+                    Selects all elements that match a CSS selector, returning a static NodeList.
+                    javascriptCopyconst elements = document.querySelectorAll('.myClass');
+                </p>
+                <p>
+                    getElementsByName():
+                    Selects elements by their name attribute, returning a live NodeList.
+                    javascriptCopyconst elements = document.getElementsByName('myName');
+                </p>
+                <p>
+                    The querySelector() and querySelectorAll() methods are more versatile as they allow you to use complex CSS selectors. They're often preferred in modern web development due to their flexibility.
+                </p>
+                    
+            </div>
+            <div class="border-2 rounded-2xl p-5 md:p-10 m-5 space-y-5">
+                <h3 class="md:text-2xl font-bold">What is event delegation in the context of the DOM, and why is it useful?</h3>
+                <p class="">
+                    Event delegation is a technique in DOM event handling where instead of attaching event listeners to individual elements, you attach a single event listener to a parent element. This parent element then handles events for its children through event bubbling. Here's a concise explanation of event delegation and its benefits:
+                </p>
+                <p>
+                    Event delegation works by taking advantage of event bubbling, where events triggered on nested elements "bubble up" through their ancestors. By placing a listener on a parent, you can detect events on its descendants.
+                    Key benefits of event delegation include:
+                </p>
+                <p>
+                    Improved performance: Fewer event listeners are needed, reducing memory usage and initialization time.
+                    Dynamic elements: It works for elements added to the DOM after the initial page load, without needing to attach new listeners.
+                    Simplified code: Centralizes event handling logic, making it easier to manage and maintain.
+                    Reduced binding: Avoids the need to bind or unbind listeners when elements are added or removed.
+                    Memory efficiency: Helps prevent memory leaks associated with removing elements with attached listeners.
+                </p>
+                <p>
+                    Event delegation is particularly useful for large lists, tables, or dynamically changing content where attaching individual listeners would be impractical or inefficient.
+                </p>  
+                
+            </div>
+            <div class="border-2 rounded-2xl p-5 md:p-10 m-5 space-y-5">
+                <h3 class="md:text-2xl font-bold">How do you manipulate an element's attributes and styles using the DOM?</h3>
+                <p>
+                    Manipulating an element's attributes and styles using the DOM is a common task in web development. Here's a concise overview of how to do this:
+                </p>
+                <p>
+                    Attribute Manipulation:  <br>
+                    Get attribute: element.getAttribute('attributeName') <br>
+                    Set attribute: element.setAttribute('attributeName', 'value') <br>
+                    Remove attribute: element.removeAttribute('attributeName') <br>
+                    Check attribute: element.hasAttribute('attributeName') <br>
+                </p>
+                <p>
+                    For some common attributes, we can also use direct properties:  <br>
+
+                    element.id = 'newId'  <br>
+                    element.className = 'newClass'
+                </p>
+                <p>
+                    Style Manipulation: <br>
+
+                    Inline styles: element.style.propertyName = 'value' <br>
+                    For example: element.style.color = 'red' <br>
+                    Multiple styles: element.style.cssText = 'color: red; font-size: 20px;' <br>
+                    Get computed style: window.getComputedStyle(element)
+                </p>
+                <p>
+                    CSS Classes: <br>
+
+                    Add class: element.classList.add('className') <br>
+                    Remove class: element.classList.remove('className') <br>
+                    Toggle class: element.classList.toggle('className') <br>
+                    Check class: element.classList.contains('className')
+                </p>
+                <p>
+                    These methods allow us to dynamically change an element's appearance and behavior. The style property is useful for inline styles, while classList is preferred for adding/removing CSS classes.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
